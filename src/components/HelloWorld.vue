@@ -1,58 +1,153 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br>
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener">vue-cli documentation</a>.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel" target="_blank" rel="noopener">babel</a></li>
-      <li><a href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint" target="_blank" rel="noopener">eslint</a></li>
-    </ul>
-    <h3>Essential Links</h3>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank" rel="noopener">Forum</a></li>
-      <li><a href="https://chat.vuejs.org" target="_blank" rel="noopener">Community Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
-    </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
-      <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
-      <li><a href="https://github.com/vuejs/vue-devtools#vue-devtools" target="_blank" rel="noopener">vue-devtools</a></li>
-      <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
-    </ul>
+    <div style="text-align: center; margin: auto; height: 200px; padding: 35px; max-width:300px ">
+
+      <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+           x="0px" y="0px"
+           viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve"
+           preserveAspectRatio="xMidYMid meet" width="20" height="20">
+        <g>
+			<circle className="circle" cx="50" cy="49.9999657" r="47.5"/>
+          <circle className="circle-dash" cx="50" cy="49.9999657" r="47.5"/>
+          <polyline className="check"
+                    points="28.6469955,52.0561066 42.2152748,65.6243896 71.3530045,36.4866562 	"/>
+          <polyline className="check-dash"
+                    points="28.6469955,52.0561066 42.2152748,65.6243896 71.3530045,36.4866562 	"/>
+		</g>
+		</svg>
+
+
+    </div>
+    <div style="text-align: center; margin: auto; padding: 25px;">
+
+      <a href="#" className="myButton" type=button value="Refresh" onClick="history.go()">Refresh</a>
+    </div>
+
   </div>
 </template>
 
-<script>
-export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
-}
-</script>
+<style>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
+.circle{fill:none;stroke:#1E4164;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+.circle-dash{fill:none;stroke:#1E4164;stroke-width:3;stroke-linecap:round;stroke-miterlimit:10;}
+.check{fill:none;stroke:#1E4164;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+.check-dash{fill:none;stroke:#1E4164;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+
+.check {
+  stroke-dasharray: 60 100;
+  animation: check 1.2s cubic-bezier(0.5, 0, 0.6, 1) forwards 0.15s;
+  -webkit-animation: check 1.2s cubic-bezier(0.5, 0, 0.6, 1) forwards 0.15s;
+  -moz-animation: check 1.2s cubic-bezier(0.5, 0, 0.6, 1) forwards 0.15s;
+  -o-animation: check 1.2s cubic-bezier(0.5, 0, 0.6, 1) forwards 0.15s;
+  opacity: 0;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+@-webkit-keyframes check {
+  from {stroke-dashoffset: 60;
+    opacity: 1;}
+
+  to {stroke-dashoffset: 00;
+    opacity: 1;}
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
+
+@-moz-keyframes check {
+  from {stroke-dashoffset: 60;
+    opacity: 1;}
+
+  to {stroke-dashoffset: 00;
+    opacity: 1;}
 }
-a {
-  color: #42b983;
+
+@keyframes check {
+  from {stroke-dashoffset: 60;
+    opacity: 1;}
+
+  to {stroke-dashoffset: 00;
+    opacity: 1;}
 }
+
+.check-dash {
+  stroke-dasharray: 10 100;
+  animation: check-dash 1.2s cubic-bezier(0.5, 0, 0.6, 1) forwards;
+  -webkit-animation: check-dash 1.2s cubic-bezier(0.5, 0, 0.6, 1) forwards;
+  -moz-animation: check-dash 1.2s cubic-bezier(0.5, 0, 0.6, 1) forwards;
+  -o-animation: check-dash 1.2s cubic-bezier(0.5, 0, 0.6, 1) forwards;
+}
+
+@-webkit-keyframes check-dash {
+  from {stroke-dashoffset: 120;}
+  to {stroke-dashoffset: 45;}
+}
+
+@-moz-keyframes check-dash {
+  from {stroke-dashoffset: 120;}
+  to {stroke-dashoffset: 45;}
+}
+
+@keyframes check-dash {
+  from {stroke-dashoffset: 120;}
+  to {stroke-dashoffset: 45;}
+}
+
+.circle {
+  stroke-dasharray: 300 300;
+  animation: circle 1.5s cubic-bezier(0.5, 0, 0.5, 1) forwards 0.15s;
+  -webkit-animation: circle 1.5s cubic-bezier(0.5, 0, 0.5, 1) forwards 0.15s;
+  -moz-animation: circle 1.5s cubic-bezier(0.5, 0, 0.5, 1) forwards 0.15s;
+  -o-animation: circle 1.5s cubic-bezier(0.5, 0, 0.5, 1) forwards 0.15s;
+  opacity: 0;
+}
+
+@-webkit-keyframes circle {
+  from {stroke-dashoffset:300;
+    opacity: 1;}
+  to {stroke-dashoffset:0;
+    opacity: 1;}
+}
+
+@-moz-keyframes circle {
+  from {stroke-dashoffset:300;
+    opacity: 1;}
+  to {stroke-dashoffset:0;
+    opacity: 1;}
+}
+
+@keyframes circle {
+  from {stroke-dashoffset:300;
+    opacity: 1;}
+  to {stroke-dashoffset:0;
+    opacity: 1;}
+}
+
+.circle-dash {
+  stroke-dasharray: 10 300;
+  animation: circledash 1.5s cubic-bezier(0.5, 0, 0.5, 1) forwards 0.05s;
+  -webkit-animation: circledash 1.5s cubic-bezier(0.5, 0, 0.5, 1) forwards 0.05s;
+  -moz-animation: circledash 1.5s cubic-bezier(0.5, 0, 0.5, 1) forwards 0.05s;
+  -o-animation: circledash 1.5s cubic-bezier(0.5, 0, 0.5, 1) forwards 0.05s;
+  opacity: 0;
+}
+
+@-webkit-keyframes circledash {
+  from {stroke-dashoffset:320;
+    opacity: 1;}
+  to {stroke-dashoffset: 20;
+    opacity: 1;}
+}
+
+@-moz-keyframes circledash {
+  from {stroke-dashoffset:320;
+    opacity: 1;}
+  to {stroke-dashoffset: 20;
+    opacity: 1;}
+}
+
+@keyframes circledash {
+  from {stroke-dashoffset:320;
+    opacity: 1;}
+  to {stroke-dashoffset: 20;
+    opacity: 1;}
+}
+
+
 </style>
