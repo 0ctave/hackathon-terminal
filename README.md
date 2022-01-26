@@ -1,4 +1,4 @@
-# terminal
+# terminalfinal
 
 ## Project setup
 ```

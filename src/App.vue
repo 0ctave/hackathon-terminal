@@ -1,47 +1,28 @@
 <template>
   <div id="app">
-    <div class="container">
-
-    <Check/>
-    </div>
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
 <script>
-import Check from './components/Check.vue'
+import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
   components: {
-    Check
+    HelloWorld
   }
-
 }
 </script>
 
 <style>
-@import url("https://fonts.googleapis.com/css?family=Lato");
-
-
 #app {
-  height: 100%;
-  display: flex;
-  background: linear-gradient(45deg, #70298C, #3192EB, #C5C1A1);
-}
-
-body {
-  margin: 0;
-  height: 100vh;
-  font-family: "Lato", sans-serif;
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-}
-
-.container {
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
 }
 </style>
